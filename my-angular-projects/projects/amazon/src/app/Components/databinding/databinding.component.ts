@@ -11,4 +11,5 @@ export class DatabindingComponent {
     Price: 45000.45,
     InStock: true,
   };
+  disableButton = false;
 }
