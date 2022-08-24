@@ -1,5 +1,10 @@
 <div class="container-fluid">
   <h2>Product Details</h2>
+
+  <div *ngIf="true; then thenBlock; else elseBlock"></div>
+  <ng-template #thenBlock>Statement if true</ng-template>
+  <ng-template #elseBlock>Statement if false</ng-template>
+
   <dl class="row">
     <dt class="col-2">Name</dt>
     <dd class="col-10">{{ product.Name }}</dd>
