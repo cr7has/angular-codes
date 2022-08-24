@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col-3">
+      <h1>Form</h1>
+      <dl>
+        <dt>Name</dt>
+        <dd><input [(ngModel)]="Name" type="text" /></dd>
+        <dt>Price</dt>
+        <dd><input [(ngModel)]="Price" type="text" /></dd>
+        <dt>Shipped To</dt>
+        <dd>
+          <select [(ngModel)]="ShippedTo">
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Kolkata</option>
+          </select>
+        </dd>
+        <dt>In Stock</dt>
+        <dd><input [(ngModel)]="InStock" type="checkbox" />YES</dd>
+      </dl> -->
+    <div class="col-3">
+      <h1>Form Registration</h1>
+      <dl>
+        <dt>Name</dt>
+        <dd><input name="Name" ngModel #Name="ngModel" type="text" /></dd>
+        <dt>Price</dt>
+        <dd><input name="Price" ngModel #Price="ngModel" type="text" /></dd>
+        <dt>Shipped To</dt>
+        <dd>
+          <select name="ShippedTo" ngModel #ShippedTo="ngModel">
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Kolkata</option>
+          </select>
+        </dd>
+        <dt>In Stock</dt>
+        <dd>
+          <input name="InStock" ngModel #InStock="ngModel" type="checkbox" />YES
+        </dd>
+      </dl>
+    </div>
+    <div class="col-3">
+      <h1>Details</h1>
+      <dl>
+        <!-- <dt>Name</dt>
+        <dd>{{ Name }}</dd>
+        <dt>Price</dt>
+        <dd>{{ Price }}</dd>
+        <dt>ShippedTo</dt>
+        <dd>{{ ShippedTo }}</dd>
+        <dt>InStock</dt>
+        <dd>{{ InStock ? "Available" : "Out o Stock" }}</dd> -->
+        <dt>Name</dt>
+        <dd>{{ Name.value }}</dd>
+        <dt>Price</dt>
+        <dd>{{ Price.value }}</dd>
+        <dt>ShippedTo</dt>
+        <dd>{{ ShippedTo.value }}</dd>
+        <dt>InStock</dt>
+        <dd>{{ InStock.value ? "Available" : "Out o Stock" }}</dd>
+      </dl>
+    </div>
+  </div>
+</div>

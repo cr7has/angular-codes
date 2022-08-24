@@ -1,13 +1,23 @@
 <!-- <p>databinding works!</p> -->
-<div>
-  <h2>Product Details</h2>
-  <dl>
-    <dt>Name</dt>
-    <dd>{{ product.Name }}</dd>
-    <dt>Price</dt>
-    <dd>{{ product.Price }}</dd>
-    <dt>Stock</dt>
-    <dd>{{ product.InStock ? "Available" : "Out o Stock" }}</dd>
-  </dl>
-  <button disabled="{{ disableButton }}">Register</button>
+
+<div class="container-fluid">
+  <div>
+    <h2>Product Details</h2>
+    <dl>
+      <dt>Name</dt>
+      <dd [innerHTML]="product.Name"></dd>
+      <dd><input type="text" [value]="product.Name" /></dd>
+      <dt>Price</dt>
+      <dd [innerHTML]="product.Price"></dd>
+      <dt>Stock</dt>
+      <dd [innerHTML]="product.InStock ? 'Available' : 'Not in Stock'"></dd>
+    </dl>
+    <button [disabled]="disableButton">Register</button>
+  </div>
+  <br />
+  <table [width]="width" [attr.height]="height" border="1">
+    <tr>
+      <td>Name</td>
+    </tr>
+  </table>
 </div>
