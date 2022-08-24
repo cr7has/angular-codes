@@ -8,7 +8,8 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { DatabindingComponent } from './Components/databinding/databinding.component';
 import { TwoWayDataBindingComponent } from './Components/two-way-data-binding/two-way-data-binding.component';
 import { FormsModule } from '@angular/forms';
-import { DatabindingusingonclickComponent } from './databindingusingonclick/databindingusingonclick.component';
+import { DirectivesComponent } from './Components/directives/directives.component';
+import { ContentProjectionComponent } from './Components/content-projection/content-projection.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DatabindingusingonclickComponent } from './databindingusingonclick/data
     ContactComponent,
     DatabindingComponent,
     TwoWayDataBindingComponent,
-    DatabindingusingonclickComponent,
+    DirectivesComponent,
+    ContentProjectionComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
@@ -29,7 +31,8 @@ import { DatabindingusingonclickComponent } from './databindingusingonclick/data
     //ContactComponent,
     // DatabindingComponent,
     // TwoWayDataBindingComponent,
-    DatabindingusingonclickComponent,
+    // DirectivesComponent,
+    ContentProjectionComponent,
   ],
 })
 export class AppModule {}

@@ -1,0 +1,7 @@
+<div>
+  <button (click)="toggleBlocks()">Change then Block</button>
+</div>
+<div *ngIf="isVisible; then firstBlock; else secondBlock"></div>
+<ng-template #firstBlock> then block </ng-template>
+<ng-template #secondBlock> another then block </ng-template>
+<ng-template #elseBlock> else block </ng-template>
