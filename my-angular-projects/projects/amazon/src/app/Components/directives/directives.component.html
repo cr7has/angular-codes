@@ -1,1 +1,17 @@
-<p>directives works!</p>
+<div class="container-fluid">
+  <h2>Product Details</h2>
+  <dl class="row">
+    <dt class="col-2">Name</dt>
+    <dd class="col-10">{{ product.Name }}</dd>
+    <dt class="col-2">Price</dt>
+    <dd class="col-10">{{ product.Price }}</dd>
+    <dt class="col-2">
+      <button (click)="ToggleImage()" class="btn btn-primary">
+        {{ btnText }}Preview
+      </button>
+    </dt>
+    <dd class="col-10">
+      <img *ngIf="showImage" [src]="product.Photo" width="100" height="100" />
+    </dd>
+  </dl>
+</div>
