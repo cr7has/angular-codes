@@ -10,6 +10,7 @@ import { TwoWayDataBindingComponent } from './Components/two-way-data-binding/tw
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './Components/directives/directives.component';
 import { ContentProjectionComponent } from './Components/content-projection/content-projection.component';
+import { SwitchdemoComponent } from './Components/switchdemo/switchdemo.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ContentProjectionComponent } from './Components/content-projection/cont
     TwoWayDataBindingComponent,
     DirectivesComponent,
     ContentProjectionComponent,
+    SwitchdemoComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
@@ -32,7 +34,8 @@ import { ContentProjectionComponent } from './Components/content-projection/cont
     // DatabindingComponent,
     // TwoWayDataBindingComponent,
     // DirectivesComponent,
-    ContentProjectionComponent,
+    // ContentProjectionComponent,
+    SwitchdemoComponent,
   ],
 })
 export class AppModule {}

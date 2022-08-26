@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <div class="btn-toolbar">
+    <div class="btn-group">
+      <button
+        (click)="handleBtnClick('Details')"
+        name="Details"
+        class="btn btn-success"
+      >
+        Details
+      </button>
+      <button
+        (click)="handleBtnClick('Preview')"
+        name="Preview"
+        class="btn btn-success"
+      >
+        Preview
+      </button>
+      <button
+        (click)="handleBtnClick('Description')"
+        name="Description"
+        class="btn btn-success"
+      >
+        Description
+      </button>
+    </div>
+  </div>
+  <div [ngSwitch]="selectedView" style="margin: top 50px">
+    <div class="card" *ngSwitchCase="'Details'">
+      <div class="card-header">
+        <h2>{{ product.Name }}</h2>
+      </div>
+      <div class="card-body">
+        <dl>
+          <dt>Price</dt>
+          <dd>{{ product.Price }}</dd>
+          <dt>Stock</dt>
+          <dd>{{ product.InStock == true ? "Available" : "Out of Stock" }}</dd>
+        </dl>
+      </div>
+      <div class="card-footer"></div>
+    </div>
+    <div class="card" *ngSwitchCase="'Preview'">
+      <div class="card-header">
+        <h2>Preview</h2>
+      </div>
+      <div class="card-body">
+        <img [src]="product.Photo" width="200" height="200" />
+      </div>
+      <div class="card-footer"></div>
+    </div>
+    <div class="card" *ngSwitchCase="'Description'">
+      <div class="card-header">
+        <h2>Description</h2>
+      </div>
+      <div class="card-body">
+        {{ product.Description }}
+      </div>
+      <div class="card-footer"></div>
+    </div>
+  </div>
+</div>

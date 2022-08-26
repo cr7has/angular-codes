@@ -1,7 +1,37 @@
-<div>
+<!-- <div>
   <button (click)="toggleBlocks()">Change then Block</button>
 </div>
 <div *ngIf="isVisible; then firstBlock; else secondBlock"></div>
 <ng-template #firstBlock> then block </ng-template>
 <ng-template #secondBlock> another then block </ng-template>
-<ng-template #elseBlock> else block </ng-template>
+<ng-template #elseBlock> else block </ng-template> -->
+<div class="container-fluid">
+  <h2>Product Details</h2>
+  <div class="card">
+    <div class="card-header">
+      <button (click)="Toggle()" class="btn btn-primary btn-block form-control">
+        {{ detailsBtn }}
+      </button>
+    </div>
+    <div class="card-body">
+      <div *ngIf="isVisible; then thenBlock"></div>
+      <ng-template #details>
+        <table class="table table-hover">
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+          </tr>
+          <tr>
+            <td>Nike Casuals</td>
+            <td>4500.50</td>
+            <td>Available</td>
+          </tr>
+        </table>
+      </ng-template>
+      <ng-template #preview>
+        <img src="../../../assets/shoes.jpg" width="200" height="100" />
+      </ng-template>
+    </div>
+  </div>
+</div>
