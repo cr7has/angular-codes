@@ -19,9 +19,19 @@ export class SwitchdemoComponent implements OnInit {
   // handleBtnUsingEvents(e) {
   //   this.view = e.target.name;
   // }
+  views = ['Details', 'Preview', 'Description'];
 
   handleBtnClick(str: String) {
     this.selectedView = str;
+  }
+  count = 0;
+  handleNextClick() {
+    this.count++;
+    this.selectedView = this.views[this.count];
+  }
+  handlePrevClick() {
+    this.count--;
+    this.selectedView = this.views[this.count];
   }
   constructor() {}
   ngOnInit(): void {}
