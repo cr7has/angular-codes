@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './Components/directives/directives.component';
 import { ContentProjectionComponent } from './Components/content-projection/content-projection.component';
 import { SwitchdemoComponent } from './Components/switchdemo/switchdemo.component';
+import { NgForDemoComponent } from './Components/ng-for-demo/ng-for-demo.component';
+import { ShoppingAppComponent } from './Components/shopping-app/shopping-app.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { SwitchdemoComponent } from './Components/switchdemo/switchdemo.componen
     DirectivesComponent,
     ContentProjectionComponent,
     SwitchdemoComponent,
+    NgForDemoComponent,
+    ShoppingAppComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
@@ -35,7 +39,9 @@ import { SwitchdemoComponent } from './Components/switchdemo/switchdemo.componen
     // TwoWayDataBindingComponent,
     // DirectivesComponent,
     // ContentProjectionComponent,
-    SwitchdemoComponent,
+    // SwitchdemoComponent,
+    // NgForDemoComponent,
+    ShoppingAppComponent,
   ],
 })
 export class AppModule {}

@@ -1,0 +1,53 @@
+<div class="container-fluid">
+  <header class="hover">
+    <span class="fa fa-shopping-cart">Amazon Shopping </span>
+  </header>
+  <div class="row text-center text-primary">
+    <div class="col-3">
+      <div class="form-group">
+        <label>Select a Category</label>
+        <div>
+          <select
+            (change)="onCategoryChange()"
+            class="form-control"
+            [(ngModel)]="selectedcategory"
+          >
+            <option *ngFor="let item of categories">{{ item }}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Select a Product</label>
+        <div>
+          <select (change)="onProductChange()" class="form-control">
+            <option *ngFor="let item of products">
+              {{ item }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label>Preview</label>
+        <div class="card">
+          <div class="card-header text-center"></div>
+          <div class="card-body">
+            <img width="100" height="100" />
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-outline-danger">
+              <span class="fa fa-shopping-cart">Add To Cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6"></div>
+    <div class="col-3">
+      <button class="btn btn-outline-danger">
+        <span class="fa fa-shopping-basket">View Cart</span>
+      </button>
+    </div>
+  </div>
+</div>
